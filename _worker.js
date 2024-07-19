@@ -808,7 +808,7 @@ const getNormalConfigs = async (env, hostName, client) => {
                     ? `&security=tls&sni=${
                         randomUpperCase(hostName)
                     }&fp=randomized&alpn=${
-			client ===  'h3'
+			'h3'
                     }`
                     : ''}&path=${`/${getRandomPath(16)}${proxyIP ? `/${encodeURIComponent(btoa(proxyIP))}` : ''}`}${
                         client === 'singbox' 
