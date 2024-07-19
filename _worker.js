@@ -2971,7 +2971,7 @@ const xrayOutboundTemp =
         tlsSettings: {
             allowInsecure: false,
             fingerprint: "chrome",
-            alpn: ["h2", "http/1.1"],
+            alpn: ["h3","h2", "http/1.1"],
             serverName: ""
         },
         wsSettings: {
