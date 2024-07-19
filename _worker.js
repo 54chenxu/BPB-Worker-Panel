@@ -199,7 +199,8 @@ export default {
                         });
 
                     default:
-                        // return new Response('Not found', { status: 404 });
+		        // 2024.7.19 取消speedtest的反代以免被投诉后封号
+                        return new Response('Not found', { status: 404 });
                         url.hostname = 'www.speedtest.net';
                         url.protocol = 'https:';
                         request = new Request(url, request);
