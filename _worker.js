@@ -808,7 +808,6 @@ const getNormalConfigs = async (env, hostName, client) => {
                     ? `&security=tls&sni=${
                         randomUpperCase(hostName)
                     }&fp=randomized&alpn=${
-                        // client === 'singbox' ? 'http/1.1' : 'h2,http/1.1' 2024.7.19 让ios上的Shadowrocket的ALN配置参数修改为h3
 			client ===  'h3'
                     }`
                     : ''}&path=${`/${getRandomPath(16)}${proxyIP ? `/${encodeURIComponent(btoa(proxyIP))}` : ''}`}${
